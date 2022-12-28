@@ -12,7 +12,7 @@ export class AuthConfig {
   constructor() {
     const {COGNITO_USER_POOL_ID, COGNITO_CLIENT_ID, COGNITO_REGION, USE_AUTH} = process.env;
 
-    this.useAuth = USE_AUTH === 'true';
+    this.useAuth = !!+USE_AUTH;
 
     if (this.useAuth) {
       this.userPoolId = COGNITO_USER_POOL_ID;
