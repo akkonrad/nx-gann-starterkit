@@ -7,7 +7,7 @@
     "start:api": "nx serve api",
     "start:db": "docker start neo4j-gann",
     "init:db": "docker run -d --publish=7474:7474 --publish=7687:7687 -e NEO4J_apoc_export_file_enabled=true -e NEO4J_apoc_import_file_enabled=true -e NEO4J_apoc_import_file_use__neo4j__config=true -e NEO4J_AUTH=neo4j/password -e NEO4JLABS_PLUGINS='[\"apoc\"]' --name neo4j-gann --restart=always neo4j:4.4",
-    "start": "concurrently --kill-others -n front,api,db -c \"#e28743,#76b5c5\" \"npm run start:app\" \"npm run start:api\""
+    "start": "concurrently --kill-others -n front,api -c \"#e28743,#76b5c5\" \"npm run start:app\" \"npm run start:api\""
   },
   "private": true,
   "devDependencies": {
