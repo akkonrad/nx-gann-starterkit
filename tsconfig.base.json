@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@nx-gannt-starterkit/auth": ["libs/auth/src/index.ts"],
-      "@nx-gannt-starterkit/gql": ["libs/gql/src/index.ts"]
+      "@nx-gannt-starterkit/gql": ["libs/gql/src/index.ts"],
+      "movies": ["libs/movies/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
