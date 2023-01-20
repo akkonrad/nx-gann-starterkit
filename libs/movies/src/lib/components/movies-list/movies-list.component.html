@@ -1,0 +1,14 @@
+<ul>
+  <li *ngFor="let movie of movies">
+    <div class="avatar">
+      <a [routerLink]="['/', 'movie', movie.title]">
+        <img src="//via.placeholder.com/64" width="64px" height="auto" [title]="movie.title" [alt]="movie.title"/>
+      </a>
+    </div>
+    <div class="info">
+      <a [routerLink]="['/', 'movie', movie.title]">
+        {{movie.title}}
+      </a>
+    </div>
+  </li>
+</ul>

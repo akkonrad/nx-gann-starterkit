@@ -1,0 +1,13 @@
+<div class="person">
+  <div class="avatar" [routerLink]="['person', person.name]">
+    <img src="//via.placeholder.com/64" width="64px" height="auto" [title]="person.name" [alt]="person.name">
+  </div>
+  <div class="info">
+    <div class="name">
+      <a [routerLink]="['person', person.name]">
+        {{person.name}}
+      </a>
+    </div>
+    <div class="born">born: {{person.born}}</div>
+  </div>
+</div>

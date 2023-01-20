@@ -1,0 +1,14 @@
+<div *ngIf="person?.actedIn">
+  <h3>Acted In:</h3>
+  <movies-list class="list-item" [movies]="person?.actedIn || []"></movies-list>
+</div>
+
+<div *ngIf="person?.directed">
+  <h3>Directed:</h3>
+  <movies-list class="list-item" [movies]="person?.actedIn || []"></movies-list>
+</div>
+
+<div *ngIf="person?.produced">
+  <h3>Produced:</h3>
+  <movies-list class="list-item" [movies]="person?.actedIn || []"></movies-list>
+</div>

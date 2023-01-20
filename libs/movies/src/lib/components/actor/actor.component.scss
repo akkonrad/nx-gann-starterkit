@@ -1,0 +1,24 @@
+$size: 64px;
+
+.actor {
+  display: flex;
+
+  .avatar {
+    margin-right: 0.5em;
+    height: $size;
+    width: $size;
+    border: 1px solid black;
+  }
+
+  .info {
+    flex-grow: 1;
+
+    .name {
+      font-weight: bold;
+    }
+
+    .born {
+      color: gray;
+    }
+  }
+}

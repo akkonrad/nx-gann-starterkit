@@ -1,0 +1,23 @@
+<strong class="tagline">{{movie?.tagline}}</strong>
+<div>released: {{movie?.released}}</div>
+
+<div *ngIf="movie?.directedBy">
+  <h3>Directed by:</h3>
+  <ng-container *ngFor="let person of movie?.directedBy">
+    <person class="list-item" [person]="person"></person>
+  </ng-container>
+</div>
+
+<div *ngIf="movie?.producedBy">
+  <h3>Produced by:</h3>
+  <ng-container *ngFor="let person of movie?.producedBy">
+    <person class="list-item" [person]="person"></person>
+  </ng-container>
+</div>
+
+<div *ngIf="movie?.actors">
+  <h3>Actors:</h3>
+  <ng-container *ngFor="let actor of movie?.actors">
+    <actor class="list-item" [actor]="actor"></actor>
+  </ng-container>
+</div>

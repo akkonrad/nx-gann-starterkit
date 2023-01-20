@@ -1,0 +1,21 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.page {
+  width: 600px;
+  margin: 0 auto;
+}
+
+h2 {
+  border-bottom: 1px solid lightgray;
+}
+
+a {
+  color: mediumvioletred;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
