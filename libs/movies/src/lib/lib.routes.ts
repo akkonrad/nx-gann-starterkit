@@ -1,17 +1,17 @@
 import { Route } from '@angular/router';
-import { MoviesListPageComponent } from "./pages/movies-list/movies-list-page.component";
-import { MoviesMoviePageComponent } from "./pages/movies-page/movies-movie-page.component";
-import { MoviesPersonPageComponent } from "./pages/movies-person/movies-person-page.component";
-import { MoviesLayoutPageComponent } from "./pages/movies-layout/movies-layout-page.component";
+import { MoviesListPage } from "./pages/movies-list/movies-list.page";
+import { MoviesMoviePage } from "./pages/movies-page/movies-movie.page";
+import { MoviesPersonPage } from "./pages/movies-person/movies-person.page";
+import { MoviesLayoutPage } from "./pages/movies-layout/movies-layout.page";
 
 export const moviesRoutes: Route[] = [
   {
     path: '',
-    component: MoviesLayoutPageComponent,
+    component: MoviesLayoutPage,
     children: [
-      {path: '', component: MoviesListPageComponent},
-      {path: 'movie/:title', component: MoviesMoviePageComponent},
-      {path: 'person/:name', component: MoviesPersonPageComponent}
+      {path: '', component: MoviesListPage},
+      {path: 'movie/:title', component: MoviesMoviePage},
+      {path: 'person/:name', component: MoviesPersonPage}
     ]
   }
 

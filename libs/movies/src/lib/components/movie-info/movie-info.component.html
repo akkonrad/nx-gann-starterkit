@@ -1,20 +1,27 @@
-<strong class="tagline">{{movie?.tagline}}</strong>
-<div>released: {{movie?.released}}</div>
+<div class="info">
+  <div class="content">
+    <strong class="tagline">{{movie?.tagline}}</strong>
+    <div>released: {{movie?.released}}</div>
 
-<div *ngIf="movie?.directedBy">
-  <h3>Directed by:</h3>
-  <ng-container *ngFor="let person of movie?.directedBy">
-    <person class="list-item" [person]="person"></person>
-  </ng-container>
+    <div *ngIf="movie?.directedBy">
+      <h3>Directed by:</h3>
+      <ng-container *ngFor="let person of movie?.directedBy">
+        <person-list-item class="list-item" [person]="person"></person-list-item>
+      </ng-container>
+    </div>
+
+    <div *ngIf="movie?.producedBy">
+      <h3>Produced by:</h3>
+      <ng-container *ngFor="let person of movie?.producedBy">
+        <person-list-item class="list-item" [person]="person"></person-list-item>
+      </ng-container>
+    </div>
+
+  </div>
+  <div class="image">
+    <img src="//via.placeholder.com/250x400" width="250px" height="auto" [title]="movie?.title" [alt]="movie?.title">
+  </div>
 </div>
-
-<div *ngIf="movie?.producedBy">
-  <h3>Produced by:</h3>
-  <ng-container *ngFor="let person of movie?.producedBy">
-    <person class="list-item" [person]="person"></person>
-  </ng-container>
-</div>
-
 <div *ngIf="movie?.actors">
   <h3>Actors:</h3>
   <ng-container *ngFor="let actor of movie?.actors">

@@ -9,9 +9,3 @@ export interface Movie {
   directedBy: PersonListItem[];
   producedBy: PersonListItem[];
 }
-
-
-export interface MovieListItem {
-  title: string;
-  released: number;
-}

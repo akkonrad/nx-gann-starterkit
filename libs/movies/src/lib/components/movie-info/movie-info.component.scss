@@ -11,3 +11,13 @@ h3 {
 .tagline {
   font-size: 1.15em;
 }
+
+.info {
+  display: flex;
+  padding-bottom: 2em;
+  border-bottom: 1px solid lightgray;
+
+  .content {
+    width: 75%;
+  }
+}
