@@ -1,0 +1,13 @@
+<div class="item">
+  <div class="avatar" [routerLink]="url">
+    <img src="//via.placeholder.com/64" width="64px" height="auto" [title]="title" [alt]="title">
+  </div>
+  <div class="info">
+    <div class="title">
+      <a [routerLink]="url">{{title}}</a>
+    </div>
+    <div class="more">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

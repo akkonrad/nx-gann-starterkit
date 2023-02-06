@@ -1,4 +1,4 @@
-import { MovieListItem } from "./movie";
+import { MovieListItem } from "./movie-list-item";
 
 export interface Person {
   name: string;

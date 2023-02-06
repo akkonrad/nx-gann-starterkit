@@ -5,13 +5,13 @@ import { moviesRoutes } from './lib.routes';
 import { MoviesListComponent } from './components/movies-list/movies-list.component';
 import { MoviePersonComponent } from './components/movie-person/movie-person.component';
 import { MovieInfoComponent } from './components/movie-info/movie-info.component';
-import { PersonListItemComponent } from './components/person/person-list-item.component';
 import { ActorComponent } from './components/actor/actor.component';
-import { MoviesLayoutPage } from './pages/movies-layout/movies-layout.page';
-import { MoviesListPage } from './pages/movies-list/movies-list.page';
-import { MoviesMoviePage } from './pages/movies-page/movies-movie.page';
-import { MoviesPersonPage } from './pages/movies-person/movies-person.page';
-import { ListItemComponent } from './components/list-item/list-item.component';
+import { MoviesLayoutComponent } from "./components/movies-layout.component";
+import { MoviesPersonPage } from "./pages/movies-person/movies-person.page";
+import { MoviesMoviePage } from "./pages/movies-page/movies-movie.page";
+import { MoviesListPage } from "./pages/movies-list/movies-list.page";
+import { PersonComponent } from "./components/person/person.component";
+import { ListItemComponent } from "./components/list-item/list-item.component";
 
 @NgModule({
   imports: [CommonModule, RouterModule.forChild(moviesRoutes)],
@@ -22,11 +22,12 @@ import { ListItemComponent } from './components/list-item/list-item.component';
     MoviesListComponent,
     MoviePersonComponent,
     MovieInfoComponent,
-    MoviesLayoutPage,
-    PersonListItemComponent,
+    MoviesLayoutComponent,
+    PersonComponent,
     ActorComponent,
     ListItemComponent,
   ],
   exports: [MoviesListPage, MoviesMoviePage, MoviesPersonPage],
 })
-export class MoviesModule {}
+export class MoviesModule {
+}

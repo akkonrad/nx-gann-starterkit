@@ -6,14 +6,14 @@
     <div *ngIf="movie?.directedBy">
       <h3>Directed by:</h3>
       <ng-container *ngFor="let person of movie?.directedBy">
-        <person-list-item class="list-item" [person]="person"></person-list-item>
+        <person class="list-item" [person]="person"></person>
       </ng-container>
     </div>
 
     <div *ngIf="movie?.producedBy">
       <h3>Produced by:</h3>
       <ng-container *ngFor="let person of movie?.producedBy">
-        <person-list-item class="list-item" [person]="person"></person-list-item>
+        <person class="list-item" [person]="person"></person>
       </ng-container>
     </div>
 

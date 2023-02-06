@@ -1,0 +1,24 @@
+$size: 64px;
+
+.item {
+  display: flex;
+
+  .avatar {
+    margin-right: 0.5em;
+    height: $size;
+    width: $size;
+    border: 1px solid black;
+  }
+
+  .info {
+    flex-grow: 1;
+
+    .title {
+      font-weight: bold;
+    }
+
+    .more {
+      color: lightgray;
+    }
+  }
+}

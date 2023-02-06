@@ -6,11 +6,11 @@ import { Observable } from "rxjs";
 
 @Component({
   selector: 'movies-person',
-  templateUrl: './movies-person-page.component.html',
-  styleUrls: ['./movies-person-page.component.scss'],
+  templateUrl: './movies-person.page.html',
+  styleUrls: ['./movies-person.page.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MoviesPersonPageComponent {
+export class MoviesPersonPage {
 
   name!: Person['name'];
   person$!: Observable<Person>;

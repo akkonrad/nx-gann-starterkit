@@ -5,11 +5,11 @@ import { Observable } from "rxjs";
 
 @Component({
   selector: 'movies-list-page',
-  templateUrl: './movies-list-page.component.html',
-  styleUrls: ['./movies-list-page.component.scss'],
+  templateUrl: './movies-list.page.html',
+  styleUrls: ['./movies-list.page.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MoviesListPageComponent implements OnInit {
+export class MoviesListPage implements OnInit {
 
   movies$!: Observable<MovieListItem[]>
 

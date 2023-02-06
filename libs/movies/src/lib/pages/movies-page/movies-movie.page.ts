@@ -6,11 +6,11 @@ import { MovieService } from "../../services/movie.service";
 
 @Component({
   selector: 'movies-page',
-  templateUrl: './movies-movie-page.component.html',
-  styleUrls: ['./movies-movie-page.component.scss'],
+  templateUrl: './movies-movie.page.html',
+  styleUrls: ['./movies-movie.page.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MoviesMoviePageComponent implements OnInit {
+export class MoviesMoviePage implements OnInit {
 
   title: string = '-';
   movie$!: Observable<Movie> | null;
