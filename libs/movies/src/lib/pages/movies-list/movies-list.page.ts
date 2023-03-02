@@ -13,10 +13,17 @@ export class MoviesListPage implements OnInit {
 
   movies$!: Observable<MovieListItem[]>
 
+  loading: boolean = false;
+
+  posts: any;
+
   constructor(private service: MovieService) {
   }
 
   ngOnInit() {
     this.movies$ = this.service.getAllMovies();
+  }
+
+  ngOnDestroy() {
   }
 }
