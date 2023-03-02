@@ -12,9 +12,13 @@ import { MoviesMoviePage } from "./pages/movies-page/movies-movie.page";
 import { MoviesListPage } from "./pages/movies-list/movies-list.page";
 import { PersonComponent } from "./components/person/person.component";
 import { ListItemComponent } from "./components/list-item/list-item.component";
+import { APOLLO_OPTIONS, ApolloModule } from "apollo-angular";
+import { HttpLink } from "apollo-angular/http";
+import { InMemoryCache } from '@apollo/client/core';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(moviesRoutes)],
+  imports: [CommonModule, RouterModule.forChild(moviesRoutes), ApolloModule, HttpClientModule],
   declarations: [
     MoviesListPage,
     MoviesMoviePage,
@@ -28,6 +32,20 @@ import { ListItemComponent } from "./components/list-item/list-item.component";
     ListItemComponent,
   ],
   exports: [MoviesListPage, MoviesMoviePage, MoviesPersonPage],
+  providers: [
+    {
+      provide: APOLLO_OPTIONS,
+      useFactory(httpLink: HttpLink) {
+        return {
+          cache: new InMemoryCache(),
+          link: httpLink.create({
+            uri: 'http://localhost:3333/graphql',
+          }),
+        };
+      },
+      deps: [HttpLink],
+    },
+  ],
 })
 export class MoviesModule {
 }

@@ -2,6 +2,7 @@
 import { gql } from 'apollo-server-express';
 
 export const typeDefs = gql`
+
     type Person {
         name: String!
         born: Int
